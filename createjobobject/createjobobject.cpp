@@ -118,8 +118,9 @@ DWORD WINAPI  JobNotificationThread()
                 }
                 else
                 {
-                    printf("limitViolation.IoWriteBytes :%I64d\r\n", limitViolation.IoWriteBytes);
-                    printf("limitViolation.JobMemory :%I64d\r\n", limitViolation.JobMemory);
+                    printf("limitViolation.IoWriteBytes :%I64d 0x%I64X\r\n", limitViolation.IoWriteBytes, limitViolation.IoWriteBytes);
+                    printf("limitViolation.JobMemory :%I64d 0x%I64X\r\n", limitViolation.JobMemory, limitViolation.JobMemory);
+                    printf("limitViolation.JobMemory :%I64d 0x%I64X\r\n", limitViolation.PerJobUserTime, limitViolation.PerJobUserTime);
                 }
 
                 ZeroMemory(&notificationLimit, sizeof(notificationLimit));
@@ -134,7 +135,7 @@ DWORD WINAPI  JobNotificationThread()
                 }
                 else
                 {
-                    printf("notificationLimit.JobMemoryLimit :%I64d\r\n", notificationLimit.JobMemoryLimit);
+                    //printf("notificationLimit.JobMemoryLimit :%I64d\r\n", notificationLimit.JobMemoryLimit);
                 }
                 TerminateJobObject(hJob, 7012);
                 break;
