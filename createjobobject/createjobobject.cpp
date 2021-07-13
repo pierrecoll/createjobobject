@@ -120,7 +120,7 @@ DWORD WINAPI  JobNotificationThread()
                 {
                     printf("limitViolation.IoWriteBytes :%I64d 0x%I64X\r\n", limitViolation.IoWriteBytes, limitViolation.IoWriteBytes);
                     printf("limitViolation.JobMemory :%I64d 0x%I64X\r\n", limitViolation.JobMemory, limitViolation.JobMemory);
-                    printf("limitViolation.JobMemory :%I64d 0x%I64X\r\n", limitViolation.PerJobUserTime, limitViolation.PerJobUserTime);
+                    printf("limitViolation.PerJobUsertime :%I64d 0x%I64X\r\n", limitViolation.PerJobUserTime, limitViolation.PerJobUserTime);
                 }
 
                 ZeroMemory(&notificationLimit, sizeof(notificationLimit));
